@@ -21,7 +21,6 @@ export default function Experience() {
             </div>
             <p className="timeline-desc">{career.description}</p>
             <p className="timeline-note">
-              전자서명 SaaS 플랫폼{' '}
               <a
                 href={career.featuredProject.url}
                 className="inline-link"

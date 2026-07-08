@@ -1,6 +1,33 @@
 import { about } from '../data/resume'
 import SectionTitle from './SectionTitle'
 
+function GrowthParagraph({ paragraph }) {
+  if (typeof paragraph === 'string') {
+    return <p className="card-text">{paragraph}</p>
+  }
+
+  return (
+    <p className="card-text">
+      {paragraph.segments.map((segment, index) =>
+        segment.link ? (
+          <a
+            key={index}
+            href={segment.link.url}
+            className="visit-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {segment.link.label}
+            <span className="visit-link-hint">{segment.link.hint} ↗</span>
+          </a>
+        ) : (
+          <span key={index}>{segment.text}</span>
+        ),
+      )}
+    </p>
+  )
+}
+
 export default function About() {
   return (
     <section id="about" className="section">
@@ -14,7 +41,11 @@ export default function About() {
         <div className="about-grid">
           <article className="card about-card">
             <h3 className="card-title">성장 과정</h3>
-            <p className="card-text pre-line">{about.growth}</p>
+            <div className="growth-text">
+              {about.growth.map((paragraph, index) => (
+                <GrowthParagraph key={index} paragraph={paragraph} />
+              ))}
+            </div>
           </article>
 
           <article className="card about-card">

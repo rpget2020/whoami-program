@@ -463,6 +463,45 @@ ul {
   text-decoration: underline;
 }
 
+.growth-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.growth-text .card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.visit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  vertical-align: baseline;
+  transition: opacity 0.2s;
+}
+
+.visit-link:hover {
+  opacity: 0.85;
+}
+
+.visit-link-hint {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-family: var(--mono);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(59, 158, 255, 0.25);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 .project-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
