@@ -21,7 +21,19 @@ export default function Projects() {
                 <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
                 <div className="project-title-wrap">
                   <h3 className="project-title">{project.title}</h3>
-                  <span className="project-period">{project.period}</span>
+                  <div className="project-meta">
+                    <span className="project-period">{project.period}</span>
+                    {project.link && (
+                      <a
+                        href={project.link.url}
+                        className="project-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {project.link.label} ↗
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
 

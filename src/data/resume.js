@@ -31,6 +31,7 @@ export const education = [
 
 export const certifications = [
   { name: '정보처리기사', issuer: 'Q-net', date: '2022.06' },
+  { name: 'SQLD', issuer: '한국데이터산업진흥원' },
   { name: 'TOEIC', issuer: 'YBM', date: '2019.06' },
 ]
 
@@ -40,14 +41,23 @@ export const career = {
   position: '연구위원',
   period: '2021.04 – 2026.03',
   description: 'Java 및 웹서비스 개발',
+  featuredProject: {
+    name: '유비컨텐츠',
+    url: 'https://ubicontent.co.kr/',
+    description: '맞춤형 전자서명·계약관리 SaaS 플랫폼',
+  },
 }
 
 export const projects = [
   {
     id: 'esign',
-    title: '전자서명 웹서비스 개발 및 인터페이스',
+    title: '유비컨텐츠 — 전자서명 웹서비스 개발 및 인터페이스',
     period: '2024.11 – 2026.02',
     highlight: true,
+    link: {
+      label: 'ubicontent.co.kr',
+      url: 'https://ubicontent.co.kr/',
+    },
     tasks: [
       'Spring Boot 기반 전자서명 백엔드 시스템 구축 (템플릿 생성, 서명 요청, 이력 조회 등)',
       'JWT 기반 로그인 및 사용자 인증/인가 처리',
@@ -58,7 +68,7 @@ export const projects = [
     ],
     achievements: [
       '전자서명 서비스 출시 후 1년간 20여 개 고객사 구축 프로젝트 수행',
-      '전자서명 SaaS 플랫폼 신규 구축 및 상용 서비스 오픈',
+      '전자서명 SaaS 플랫폼(유비컨텐츠) 신규 구축 및 상용 서비스 오픈',
     ],
     tech: ['Spring Boot', 'Vue.js', 'JWT', 'Docker', 'Jenkins', 'Swagger'],
   },

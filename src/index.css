@@ -442,6 +442,27 @@ ul {
   color: var(--accent);
 }
 
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-link,
+.inline-link {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  transition: opacity 0.2s;
+}
+
+.project-link:hover,
+.inline-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
 .project-body {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -34,7 +34,8 @@ export default function Education() {
                 <article key={cert.name} className="card cert-card">
                   <h4>{cert.name}</h4>
                   <p>
-                    {cert.issuer} · {cert.date}
+                    {cert.issuer}
+                    {cert.date && ` · ${cert.date}`}
                   </p>
                 </article>
               ))}
